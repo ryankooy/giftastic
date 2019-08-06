@@ -1,0 +1,15 @@
+#b {
+    position: fixed;
+    float: right;
+    width: 250px;
+    right: 0;
+}
+
+#gifs {
+    width: 100%;
+}
+
+.pic {
+    max-height: 150px;
+    clear: right;
+}

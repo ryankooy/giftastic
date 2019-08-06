@@ -2,15 +2,28 @@
 <html lang="en-us">
     <head>
         <meta charset="UTF-8">
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <title>GifTastic!</title>
     </head>
     <body>
-        <script type="text/javascript"></script>
 
         <h1>GifTastic</h1>
 
-        <div></div>
+        <div class="buttons"></div>
+
+        <div class="input-group mb-3" id="b">
+            <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon1">Add Button!</button>
+            </div>
+            <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        </div>
+        
+        <div id="gifs"></div>
+
+        <script src="assets/javascript/app.js"></script>
 
     </body>
 </html>
