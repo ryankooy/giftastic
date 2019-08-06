@@ -42,8 +42,6 @@ $(document).ready(function() {
 
         }).then(function(resp) {
 
-            console.log(resp);
-
             var r = resp.data;
 
             for (var j = 0; j < r.length; j++) {
@@ -52,17 +50,21 @@ $(document).ready(function() {
 
                 var rating = r[j].rating;
 
-                var p = $('<p>').text("Rating: " + rating);
+                if (rating !== 'r' && rating !== 'pg-13') {
 
-                var pic = $('<img>');
+                    var p = $('<p>').text("Rating: " + rating);
 
-                pic.attr('src', r[j].images.fixed_height.url);
-                pic.addClass('pic');
+                    var pic = $('<img>');
 
-                gif.append(p);
-                gif.append(pic);
+                    pic.attr('src', r[j].images.fixed_height.url);
+                    pic.addClass('pic');
 
-                $('#gifs').prepend(gif);
+                    gif.append(p);
+                    gif.append(pic);
+
+                    $('#gifs').prepend(gif);
+
+                }
 
             }
 
@@ -71,6 +73,33 @@ $(document).ready(function() {
         });
 
 
+
+    });
+
+    $('.btn').on('click', function() {
+
+        thing = $('input').val().trim();
+        $(thing).push(bArray);
+
+        b = $('<button>');
+        b.addClass('oldB');
+
+        $('.buttons').append(b);
+        $(b).append(thing);
+
+        // if ($('input').val() === "") {
+            
+        // }
+
+        $('input').val('');
+
+    });
+
+    $('#b').keyup(function(e) {
+
+        if (e.keyCode === 13) {
+            $('.btn').click();
+        }
 
     });
 
