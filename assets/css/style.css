@@ -1,8 +1,46 @@
+#bod {
+    font-family: 'Comfortaa', cursive;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: darkgrey;
+    color: whitesmoke;
+}
+
+#h {
+    color: whitesmoke;
+    font-size: 50px;
+}
+
 #b {
+    margin-top: 20px;
     position: fixed;
     float: right;
-    width: 250px;
-    right: 0;
+    width: 300px;
+    right: 0px;
+}
+
+#p {
+    margin-right: 40px;
+    font-size: 20px;
+}
+
+#button-addon1 {
+    color: darkslategray;
+}
+
+#button-addon1:hover {
+    color: whitesmoke;
+}
+
+.oldB {
+    border-radius: 10%;
+    background-color: darkseagreen;
+    color: darkslategray;
+}
+
+.oldB:hover {
+    color: whitesmoke;
+    background-color: darkslategrey;
 }
 
 #gifs {
@@ -11,5 +49,4 @@
 
 .pic {
     max-height: 150px;
-    clear: right;
 }

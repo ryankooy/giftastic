@@ -6,7 +6,7 @@
 
 $(document).ready(function() {
 
-    bArray = ['bats', 'cats', 'gnats', 'hats', 'mats', 'pats', 'rats', 'tats', 'vats'];
+    bArray = ['tom', 'jerry', 'ren', 'stimpy', 'catdog', 'beavis', 'butthead', 'phineas', 'ferb', 'toejam', 'earl', 'pinky', 'brain', 'rocky', 'bullwinkle'];
 
     var b = '';
     var thing = '';
@@ -68,11 +68,7 @@ $(document).ready(function() {
 
             }
 
-
-            
         });
-
-
 
     });
 
