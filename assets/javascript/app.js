@@ -40,7 +40,9 @@ $(document).ready(function() {
 
             for (var j = 0; j < r.length; j++) {
 
-                var gif = $('<div>');
+                var gif = $('<span>').addClass('span');
+
+                $('#c').attr('style', 'display: auto');
 
                 var rating = r[j].rating;
 
@@ -49,6 +51,8 @@ $(document).ready(function() {
                     var p = $('<p>').text("Rating: " + rating);
 
                     var pic = $('<img>');
+
+                    // var html = "
 
                     pic.attr('src', r[j].images['480w_still'].url);
                     pic.attr('data-still', r[j].images['480w_still'].url);
@@ -75,6 +79,10 @@ $(document).ready(function() {
                     $(this).attr('data-state', 'still');
                 }
             });
+
+            // $('#add-10').on('click', function() {
+            //     queryURL = "http://api.giphy.com/v1/gifs/search?q=" + thing + "&api_key=8QgkvoLZ85mVtpm3jbBqQIEXBObzEPnh&limit=20";
+            // });
 
         });
 
