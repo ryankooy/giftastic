@@ -1,9 +1,3 @@
-// create buttons from an array
-// pushing new buttons into the array using user input values
-// show gif ratings
-// start/stop gifs with click
-// limit image # to 10
-
 $(document).ready(function() {
 
     bArray = ['tom', 'jerry', 'ren', 'stimpy', 'catdog', 'beavis', 'butthead', 'phineas', 'ferb', 'toejam', 'earl', 'pinky', 'brain', 'rocky', 'bullwinkle'];
@@ -28,6 +22,8 @@ $(document).ready(function() {
     $('.buttons').on('click', '.oldB', function() {
 
         $('#gifs').empty();
+
+        // $('#add-10').attr('style', 'display: auto');
 
         thing = $(this).text();
 
@@ -60,8 +56,8 @@ $(document).ready(function() {
                     pic.attr('data-state', 'still');
                     pic.addClass('pic');
 
-                    gif.append(p);
                     gif.append(pic);
+                    gif.append(p);
 
                     $('#gifs').prepend(gif);
 
