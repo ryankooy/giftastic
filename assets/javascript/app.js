@@ -89,15 +89,15 @@ $(document).ready(function() {
         thing = $('input').val().trim();
         $(thing).push(bArray);
 
-        b = $('<button>');
-        b.addClass('oldB');
+        if (thing !== '') {
 
-        $('.buttons').append(b);
-        $(b).append(thing);
+            b = $('<button>');
+            b.addClass('oldB');
 
-        // if ($('input').val() === "") {
-            
-        // }
+            $('.buttons').append(b);
+            $(b).append(thing);
+
+        }
 
         $('input').val('');
 
