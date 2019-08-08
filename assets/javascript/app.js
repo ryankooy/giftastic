@@ -49,7 +49,7 @@ $(document).ready(function() {
                 var rating = r[j].rating;
 
                 if (rating !== 'r' && rating !== 'pg-13') {
-
+                    
                     var p = $('<p>').text("Rating: " + rating);
 
                     var pic = $('<img>');
@@ -65,20 +65,20 @@ $(document).ready(function() {
 
                     $('#gifs').prepend(gif);
 
-                    $('.pic').on('click', function() {
-                        var s = $(this).attr('data-state');
-                        if (s === 'still') {
-                            $(this).attr('src', $(this).attr('data-animate'));
-                            $(this).attr('data-state', 'animate');
-                        } else {
-                            $(this).attr('src', $(this).attr('data-still'));
-                            $(this).attr('data-state', 'still');
-                        }
-                    });
-
                 }
 
             }
+
+            $('.pic').on('click', function() {
+                var s = $(this).attr('data-state');
+                if (s === 'still') {
+                    $(this).attr('src', $(this).attr('data-animate'));
+                    $(this).attr('data-state', 'animate');
+                } else {
+                    $(this).attr('src', $(this).attr('data-still'));
+                    $(this).attr('data-state', 'still');
+                }
+            });
 
         });
 
