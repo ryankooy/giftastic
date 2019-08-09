@@ -27,7 +27,9 @@ $(document).ready(function() {
 
         thing = $(this).text();
 
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + thing + "&api_key=8QgkvoLZ85mVtpm3jbBqQIEXBObzEPnh&limit=10";
+        var limit = 10;
+        
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + thing + "&api_key=8QgkvoLZ85mVtpm3jbBqQIEXBObzEPnh&limit=" + limit;
 
         $.ajax({
 
@@ -41,18 +43,17 @@ $(document).ready(function() {
             for (var j = 0; j < r.length; j++) {
 
                 var gif = $('<span>').addClass('span');
-
                 $('#c').attr('style', 'display: auto');
 
                 var rating = r[j].rating;
+                var title = r[j].title;
 
                 if (rating !== 'r' && rating !== 'pg-13') {
-                    
-                    var p = $('<p>').text("Rating: " + rating);
+
+                    var p = $('<p>').html(title + "<br>" + "Rating: " + rating);
+                    p.addClass('align');
 
                     var pic = $('<img>');
-
-                    // var html = "
 
                     pic.attr('src', r[j].images['480w_still'].url);
                     pic.attr('data-still', r[j].images['480w_still'].url);
@@ -80,11 +81,11 @@ $(document).ready(function() {
                 }
             });
 
-            // $('#add-10').on('click', function() {
-            //     queryURL = "http://api.giphy.com/v1/gifs/search?q=" + thing + "&api_key=8QgkvoLZ85mVtpm3jbBqQIEXBObzEPnh&limit=20";
-            // });
-
         });
+
+        // $('#add-10').on('click', function() {
+
+        // });
 
     });
 
