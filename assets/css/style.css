@@ -2,7 +2,7 @@
     font-family: 'Comfortaa', cursive;
     margin-left: 10px;
     margin-right: 10px;
-    background-color: darkgrey;
+    background-color: lightseagreen;
     color: white;
 }
 
@@ -17,7 +17,7 @@
     float: right;
     width: 300px;
     right: 0px;
-    background-color: rgba(169, 169, 169, 0.7);
+    background-color: lightseagreen;
     padding: 20px;
     z-index: 2;
 }
@@ -28,11 +28,12 @@
 }
 
 #button-addon1 {
-    color: darkslategray;
+    color: white;
 }
 
 #button-addon1:hover {
-    color: whitesmoke;
+    color: white;
+    background-color: seagreen;
 }
 
 .buttons {
@@ -41,13 +42,13 @@
 
 .oldB {
     border-radius: 10%;
-    background-color: darkseagreen;
-    color: darkslategray;
+    background-color: seagreen;
+    color: white;
 }
 
 .oldB:hover {
-    color: whitesmoke;
-    background-color: darkslategrey;
+    color: darkslategrey;
+    background-color: whitesmoke;
 }
 
 #add-10 {
